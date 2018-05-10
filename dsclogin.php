@@ -44,21 +44,22 @@
       	$password_in = $_POST['password'];
 
       	if(($email_in == $my_email)&&($password_in == $my_password)) {
-	        // session_set_cookie_params(300);
-	        // session_start();
-	        // session_regenerate_id();
+	        //session_set_cookie_params(300);
+	        session_start();
+	        //session_regenerate_id();
+	        $sessionID = session_id();
 
-	        // setcookie('session_cookie', session_id(), time() + 300, '/');
+	        setcookie('session_cookie', $sessionID, time() + 3600, '/');
 
-	        // $token = generate_token();
+	        $token = generate_token();
 
-	        // setcookie('csrf_token', $token, time() + 300, '/', 'localhost',true);
+	        setcookie('csrf_token', $token, time() + 3600, '/', 'localhost',true);
 
-	        //header("Location:user-profile.php");
-        exit;
+	        header("Location:dscaddinfo.php");
+        	exit;
     	}
     	else{
-        echo "<script> alert('Invalid Credentials, Please try again.') </script>";
+        	echo "<script> alert('Invalid Credentials, Please try again.') </script>";
 	    }
 	}
 

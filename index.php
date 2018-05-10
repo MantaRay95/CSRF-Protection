@@ -9,8 +9,13 @@
         <script src="public/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<button type="submit" class="btn btn-success btn-block" id="syn" name="syn" >CSRF protection by Syncronize Token pattern </button>
-		<button type="submit" class="btn btn-info btn-block" id="dsc" name="dsc" ><a href="dsclogin.php" class="button">CSRF protection by double submit cookies </a> </button>
-		
+		<br>
+		<div align='center'>
+			<a href=".php" class="button"><button type="submit" class="btn btn-success" id="syn" name="syn" >CSRF protection by Syncronize Token pattern </button></a>
+		</div>
+		<br>
+		<div align='center'>
+			<a href="dsclogin.php" class="button"><button type="submit" class="btn btn-info" id="dsc" name="dsc"> CSRF protection by double submit cookies </button></a>
+		</div>
 	</body>
 </html>
