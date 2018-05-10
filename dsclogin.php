@@ -11,18 +11,58 @@
 	<body>
 		<div class="container">
 		  	<h2>Login</h2>
-		  	<form>
+		  	<form action ='dsclogin.php' method='POST' enctype='multipart/form-data'>
 		    	<div class="form-group">
 		      		<label for="email">Email:</label>
-		      		<input type="email" class="form-control" id="email" placeholder="Enter email">
+		      		<input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
 		    	</div>
 		    	<div class="form-group">
-		      		<label for="pwd">Password:</label>
-		      		<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+		      		<label for="password">Password:</label>
+		      		<input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
 		    	</div>
 		    	
-		    	<button type="submit" class="btn btn-default">Login</button>
+		    	<button type="submit" class="btn btn-default" id="submit" name="submit">Login</button>
 		  	</form>
 		</div>
 	</body>
 </html>
+
+
+<?php
+    if(isset($_POST['submit'])) {
+      user_login();
+    }
+?>
+
+<?php
+    function user_login()
+    {
+      	$my_email = 'pavithra@gmail.com';
+      	$my_password = 'abc123';
+
+      	$email_in = $_POST['email'];
+      	$password_in = $_POST['password'];
+
+      	if(($email_in == $my_email)&&($password_in == $my_password)) {
+	        // session_set_cookie_params(300);
+	        // session_start();
+	        // session_regenerate_id();
+
+	        // setcookie('session_cookie', session_id(), time() + 300, '/');
+
+	        // $token = generate_token();
+
+	        // setcookie('csrf_token', $token, time() + 300, '/', 'localhost',true);
+
+	        //header("Location:user-profile.php");
+        exit;
+    	}
+    	else{
+        echo "<script> alert('Invalid Credentials, Please try again.') </script>";
+	    }
+	}
+
+	function generate_token(){
+	    return sha1(base64_encode(openssl_random_pseudo_bytes(30)));
+	}
+?>
