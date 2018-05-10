@@ -11,7 +11,7 @@
 	<body>
 		<?php
             if(!isset($_COOKIE['session_cookie'])) {
-              	echo "<h3>Couldn't set session correctly. Try login again!!!</h3><br><a href='dsclogin.php' class='button'><button type='submit' class='btn btn-info' id='dsc' name='dsc'> Login </button></a>";
+              	echo "<h3>Couldn't set session correctly. Try login again!!!</h3><br><a href='dsclogin.php' class='button'><button type='submit' class='btn btn-warning' id='dsc' name='dsc'> Login </button></a>";
             }
         ?>
 
@@ -50,7 +50,7 @@
 			                    	<div class='row'>
 			                        <div class='col-sm-2'></div>
 			                        	<div class='col-sm-8'>
-                        				<form method='post' action='' onsubmit='submitForm(this);'>
+                        				<form method='post' action='dscvalidation.php' onsubmit='submitForm(this);'>
 						              		<div class='form-group row'>
 							                    <label for='name' class='col-sm-2 col-form-label'>Full Name</label>
 							                    <div class='col-sm-10'>
@@ -59,23 +59,23 @@
 						                    </div>
 
 						                    <div class='form-group row'>
-						                        <label for='university' class='col-sm-2 col-form-label'>University</label>
+						                        <label for='university' class='col-sm-2 col-form-label'>DOB</label>
 						                        <div class='col-sm-10'>
-						                            <input type='text' class='form-control' id='university' name='university' placeholder='University' required>
+						                            <input type='text' class='form-control' id='dob' name='dob' placeholder='Date of birth' required>
 						                        </div>
 						                    </div>
 
 											<div class='form-group row'>
-						                        <label for='degree' class='col-sm-2 col-form-label'>Degree</label>
+						                        <label for='degree' class='col-sm-2 col-form-label'>Address</label>
 						                        <div class='col-sm-10'>
-						                            <input type='text' class='form-control' id='degree' name='degree' placeholder='Degree' required>
+						                            <input type='text' class='form-control' id='address' name='address' placeholder='Address' required>
 						                        </div>
 						                    </div>
 
 						                    <div class='form-group row'>
-						                        <label for='year' class='col-sm-2 col-form-label'>Year</label>
+						                        <label for='year' class='col-sm-2 col-form-label'>Age</label>
 						                        <div class='col-sm-10'>
-						                            <input type='number' class='form-control' id='year' name='year' placeholder='Year' required>
+						                            <input type='number' class='form-control' id='age' name='age' placeholder='Age' required>
 						                        </div>
 						                    </div>
 
