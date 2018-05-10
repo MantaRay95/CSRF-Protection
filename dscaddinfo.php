@@ -50,7 +50,8 @@
 			                    	<div class='row'>
 			                        <div class='col-sm-2'></div>
 			                        	<div class='col-sm-8'>
-                        				<form method='post' action='dscvalidation.php' onsubmit='submitForm(this);'>
+                        				<form method='post' method='POST' action='dscvalidation.php' onsubmit='submitForm(this);'>
+						              		<input type='hidden' name='csrf_Token' id='csrf_Token' value=''>
 						              		<div class='form-group row'>
 							                    <label for='name' class='col-sm-2 col-form-label'>Full Name</label>
 							                    <div class='col-sm-10'>
@@ -59,21 +60,21 @@
 						                    </div>
 
 						                    <div class='form-group row'>
-						                        <label for='university' class='col-sm-2 col-form-label'>DOB</label>
+						                        <label for='dob' class='col-sm-2 col-form-label'>DOB</label>
 						                        <div class='col-sm-10'>
 						                            <input type='text' class='form-control' id='dob' name='dob' placeholder='Date of birth' required>
 						                        </div>
 						                    </div>
 
 											<div class='form-group row'>
-						                        <label for='degree' class='col-sm-2 col-form-label'>Address</label>
+						                        <label for='address' class='col-sm-2 col-form-label'>Address</label>
 						                        <div class='col-sm-10'>
 						                            <input type='text' class='form-control' id='address' name='address' placeholder='Address' required>
 						                        </div>
 						                    </div>
 
 						                    <div class='form-group row'>
-						                        <label for='year' class='col-sm-2 col-form-label'>Age</label>
+						                        <label for='age' class='col-sm-2 col-form-label'>Age</label>
 						                        <div class='col-sm-10'>
 						                            <input type='number' class='form-control' id='age' name='age' placeholder='Age' required>
 						                        </div>
