@@ -21,11 +21,11 @@
 	        	var decodedCookie = decodeURIComponent(document.cookie);
 	            var ca = decodedCookie.split(';');
 	            for(var i = 0; i <ca.length; i++) {
-	            	ar c = ca[i];
+	            	var c = ca[i];
 		            	while (c.charAt(0) == ' ') {
 		            	c = c.substring(1);
 		            	}
-	        		f (c.indexOf(name) == 0) {
+	        		if (c.indexOf(name) == 0) {
 	            		return c.substring(name.length, c.length);
 	        		}
         		}
@@ -50,7 +50,7 @@
 			                    	<div class='row'>
 			                        <div class='col-sm-2'></div>
 			                        	<div class='col-sm-8'>
-                        				<form method='post' method='POST' action='dscvalidation.php' onsubmit='submitForm(this);'>
+                        				<form method='post' action='dscvalidation.php' onsubmit='submitForm(this);'>
 						              		<input type='hidden' name='csrf_Token' id='csrf_Token' value=''>
 						              		<div class='form-group row'>
 							                    <label for='name' class='col-sm-2 col-form-label'>Full Name</label>
@@ -91,6 +91,7 @@
         		</div>";
             }
         ?>
-      	
+      	<script src="/public/js/bootstrap.min.js"></script>
+        <script src="/public/js/popper.min.js"></script>
 	</body>
 </html>

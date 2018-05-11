@@ -32,8 +32,9 @@
           								$address=$_POST['address'];
           								$age=$_POST['age'];
 
-          								echo "<div class='alert alert-primary' role='alert'>".$name."</div>";
-          								echo "<div class='alert alert-secondary' role='alert'>".$dob."</div>";
+                          echo "<div class='alert alert-warning' role='alert'>"."You are free of CSRF"."</div>";
+          								echo "<div class='alert alert-success' role='alert'>".$name."</div>";
+          								echo "<div class='alert alert-info' role='alert'>".$dob."</div>";
           								echo "<div class='alert alert-success' role='alert'>".$address."</div>";
           								echo "<div class='alert alert-info' role='alert'>".$age."</div>";
                       //echo "<script>alert('not Found !!!')</script>";
