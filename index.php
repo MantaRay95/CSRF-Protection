@@ -11,7 +11,7 @@
 	<body>
 		<br>
 		<div align='center'>
-			<a href=".php" class="button"><button type="submit" class="btn btn-success" id="syn" name="syn" >CSRF protection by Syncronize Token pattern </button></a>
+			<a href="stplogin.php" class="button"><button type="submit" class="btn btn-success" id="syn" name="syn" >CSRF protection by Syncronize Token pattern </button></a>
 		</div>
 		<br>
 		<div align='center'>
