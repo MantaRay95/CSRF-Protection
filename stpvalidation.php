@@ -12,6 +12,9 @@
     <body>
         
       <div class="container">
+        <div class='row' align='right' style='padding-top: 20px;'>
+          <a href='logout.php' class='button'><button type='submit' class='btn btn-warning' id='dsc' name='dsc'> Logout </button></a>
+        </div>
         <div class="row" align="center" style="padding-top: 100px;">
           <div class="col-12">
             <div class="card">
@@ -45,6 +48,9 @@
           							}
 
           						}
+                      else{
+                        echo "<h3>Couldn't set session correctly. Try login again!!!</h3><br><a href='dsclogin.php' class='button'><button type='submit' class='btn btn-warning' id='dsc' name='dsc'> Login </button></a>";
+                      }
           						?>
 
 

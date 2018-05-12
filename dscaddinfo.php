@@ -42,6 +42,9 @@
 		<?php
 			if(isset($_COOKIE['session_cookie'])) {
               	echo "<div class='container'>
+	              	<div class='row' align='right' style='padding-top: 20px;'>
+	              		<a href='logout.php' class='button'><button type='submit' class='btn btn-warning' id='dsc' name='dsc'> Logout </button></a>
+	              	</div>
 			        <div class='row' align='center' style='padding-top: 100px;'>
 			        	<div class='col-12'>
 							<div class='card'>
@@ -81,6 +84,7 @@
 						                    </div>
 
 						                    <button type='submit' class='btn btn-primary' >Submit</button>
+						                    
                 						</form>
         							    </div>
         							</div>

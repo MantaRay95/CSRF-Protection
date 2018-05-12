@@ -10,6 +10,9 @@
 	</head>
 	<body>
 		<div class="container">
+			<div class='row' align='right' style='padding-top: 20px;'>
+	            <a href='index.php' class='button'><button type='submit' class='btn btn-default' id='dsc' name='dsc'> Back </button></a>
+	        </div>
 		  	<h2>Login</h2>
 		  	<form action ='dsclogin.php' method='POST' enctype='multipart/form-data'>
 		    	<div class="form-group">
